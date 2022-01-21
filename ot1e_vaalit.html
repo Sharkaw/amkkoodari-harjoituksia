@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vaalilaskenta</title>
+    </head>
+    <body>
+        <h1>Presidentin vaalit 2024</h1><br/>
+        <h2>Ääntenlaskenta</h2><br/>
+        <p>Äänestä suosikkiasi.</p> <!-- äänestysnapit -->
+        <button type="button" onclick="Verso();">2</button>
+        <button type="button" onclick="Saniainen();">3</button>
+        <button type="button" onclick="Multanen();">4</button>
+        <button type="button" onclick="Narsissi();">5</button>
+        <button type="button" onclick="Taimi();">6</button>
+
+        <h2>Tulos:</h2> <!-- Tulokset tulostuvat näkyviin -->
+        
+             <div id="tulostusAlue1">2. Sara Verso: 0</div>
+             <div id="tulostusAlue2">3. Emilia Saniainen: 0</div>
+             <div id="tulostusAlue3">4. Sirpa Multanen: 0</div>
+             <div id="tulostusAlue4">5. Linne Narsissi: 0</div>
+             <div id="tulostusAlue5">6. Evelia Taimi: 0</div>
+        
+
+        <script> // annetaan muuttujille lähtöarvot 0
+            let verso = 0;
+            let saniainen = 0;
+            let multanen = 0;
+            let narsissi = 0;
+            let taimi = 0;
+
+            function Verso (){ //jokainen napinpainallus kasvattaa lukua yhdellä ja tulos ilmestyy näkyviin diviin
+                verso++;
+                document.getElementById("tulostusAlue1").innerHTML = "2. Sara Verso " + verso;
+            }
+            function Saniainen (){
+                saniainen++;
+                document.getElementById("tulostusAlue2").innerHTML = "3. Emilia Saniainen " + saniainen;
+            }
+            function Multanen (){
+                multanen++;
+                document.getElementById("tulostusAlue3").innerHTML = "4. Sirpa Multanen " + multanen;
+            }
+            function Narsissi (){
+                narsissi++;
+                document.getElementById("tulostusAlue4").innerHTML = "5. Linne Narsissi " + narsissi;
+            }
+            function Taimi(){
+                taimi++;
+                document.getElementById("tulostusAlue5").innerHTML = "6. Evelia Taimi " + taimi;
+            }
+
+
+
+        </script> 
+    </body>
+</html>
