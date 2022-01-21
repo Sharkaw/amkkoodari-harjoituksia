@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head> <!-- Sisältää sivuston metatiedot -->
+    <meta charset="utf-8"/>
+    <title>PC:n pakettilaskuri</title>
+        <h1> Laske PC-pakettisi hinta</h1>
+</head>
+
+<body>  <!-- Sisältää sivuston sisällön -->
+    
+    <!-- Syöttöalueet/lomakkeet -->
+    Emolevy <input id="emolevy"/> <br/> 
+    Prosessori <input id="prosessori"/> <br/>
+    Kiintolevy <input id="kiintolevy"/> <br/>
+    Muisti <input id="muisti"/> <br/>
+    Kotelo <input id="kotelo"/> <br/>
+    Näytönohjain <input id="naytonohjain"/> <br/>
+    Virtalähde <input id="virtalahde"/> <br/>
+    Näyttö <input id="naytto"/> <br/>
+    Näppäimistö ja Hiiri <input id="nappaimistoHiiri"/> <br/>
+
+    <!-- Laskemisnappi, jota painattaessa tapahtuu functio -->
+    <button type="button" onclick="laskeSumma();">Laske yhteen</button> 
+    <br/>
+
+    <div id="tulostusAlue"> <!-- Tähän kohtaan halutaan tulos ilmoitettavan -->
+    </div>
+    
+    <script> // Tuleva ei näy sivuston käyttäjälle
+        function laskeSumma() { // Seuraa toiminto kun painetaan nappia
+        // toimintojen esittely. Kerrotaan lukijalle, että kyseessä on numero, joka luetaan lomakkeelta muuttujaan
+            let Emolevy = Number(document.getElementById("emolevy").value); 
+            let Prosessori = Number(document.getElementById("prosessori").value);
+            let Kiintolevy = Number(document.getElementById("kiintolevy").value);
+            let Muisti = Number(document.getElementById("muisti").value);
+            let Kotelo = Number(document.getElementById("kotelo").value);
+            let Naytonohjain = Number(document.getElementById("naytonohjain").value);
+            let Virtalahde = Number(document.getElementById("virtalahde").value);
+            let Naytto = Number(document.getElementById("naytto").value);
+            let NappaimistoHiiri = Number(document.getElementById("nappaimistoHiiri").value);
+
+        //yhteenlasku kaikista muuttujista ja tulostus haluttuun sijaintiin html-muodossa
+            let summa = Emolevy + Prosessori + Kiintolevy + Muisti + Kotelo + Naytonohjain + Virtalahde + Naytto + NappaimistoHiiri + " € ";
+
+            document.getElementById("tulostusAlue").innerHTML = summa;
+            
+        }
+    </script>
+    
+</body>
+</html>
