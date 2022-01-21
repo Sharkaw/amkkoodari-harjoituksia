@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Teatteri</title>
+</head>
+<body>
+    <h1>Teatteri</h1>
+    <br/>
+    X = Varattu O = Vapaa
+    <br/><br/>
+    Anna paikan numero:
+    <br/>
+    <input id="paikka"><br/>
+    <button onclick="varaa();">Varaa</button>
+    <br/><br/>
+    <div id = "tulostusAlue">Tervetuloa varaamaan!</div>
+    <br/><br/>
+    <!-- Taulukko, jossa paikkanumerot ja varaustilanne näkyvät-->
+    <table>
+        <tr>
+            <th>Paikka</th>
+            <th>Varaus</th>
+        </tr>
+        <tr> <td>1</td>
+            <td id="paikka1">O</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td id="paikka2">O</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td id="paikka3">O</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td id="paikka4">O</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td id="paikka5">O</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td id="paikka6">O</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td id="paikka7">O</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td id="paikka8">O</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td id="paikka9">O</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td id="paikka10">O</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td id="paikka11">O</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td id="paikka12">O</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td id="paikka13">O</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td id="paikka14">O</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td id="paikka15">O</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td id="paikka16">O</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td id="paikka17">O</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td id="paikka18">O</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td id="paikka19">O</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td id="paikka20">O</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td id="paikka21">O</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td id="paikka22">O</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td id="paikka23">O</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td id="paikka24">O</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td id="paikka25">O</td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td id="paikka26">O</td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td id="paikka27">O</td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td id="paikka28">O</td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td id="paikka29">O</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td id="paikka30">O</td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td id="paikka31">O</td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td id="paikka32">O</td>
+        </tr>
+        <tr>
+            <td>33</td>
+            <td id="paikka33">O</td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td id="paikka34">O</td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td id="paikka35">O</td>
+        </tr>
+        <tr>
+            <td>36</td>
+            <td id="paikka36">O</td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td id="paikka37">O</td>
+        </tr>
+        <tr>
+            <td>38</td>
+            <td id="paikka38">O</td>
+        </tr>
+        <tr>
+            <td>39</td>
+            <td id="paikka39">O</td>
+        </tr>
+        <tr>
+            <td>40</td>
+            <td id="paikka40">O</td>
+        </tr>
+        <tr>
+            <td>41</td>
+            <td id="paikka41">O</td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td id="paikka42">O</td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td id="paikka43">O</td>
+        </tr>
+        <tr>
+            <td>44</td>
+            <td id="paikka44">O</td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td id="paikka45">O</td>
+        </tr>
+        <tr>
+            <td>46</td>
+            <td id="paikka46">O</td>
+        </tr>
+        <tr>
+            <td>47</td>
+            <td id="paikka47">O</td>
+        </tr>
+        <tr>
+            <td>48</td>
+            <td id="paikka48">O</td>
+        </tr>
+        <tr>
+            <td>49</td>
+            <td id="paikka49">O</td>
+        </tr>
+        <tr>
+            <td>50</td>
+            <td id="paikka50">O</td>
+        </tr>
+        <tr>
+            <td>51</td>
+            <td id="paikka51">O</td>
+        </tr>
+        <tr>
+            <td>52</td>
+            <td id="paikka52">O</td>
+        </tr>
+        <tr>
+            <td>53</td>
+            <td id="paikka53">O</td>
+        </tr>
+        <tr>
+            <td>54</td>
+            <td id="paikka54">O</td>
+        </tr>
+        <tr>
+            <td>55</td>
+            <td id="paikka55">O</td>
+        </tr>
+        <tr>
+            <td>56</td>
+            <td id="paikka56">O</td>
+        </tr>
+        <tr>
+            <td>57</td>
+            <td id="paikka57">O</td>
+        </tr>
+        <tr>
+            <td>58</td>
+            <td id="paikka58">O</td>
+        </tr>
+        <tr>
+            <td>59</td>
+            <td id="paikka59">O</td>
+        </tr>
+        <tr>
+            <td>60</td>
+            <td id="paikka60">O</td>
+        </tr>
+        <tr>
+            <td>61</td>
+            <td id="paikka61">O</td>
+        </tr>
+        <tr>
+            <td>62</td>
+            <td id="paikka62">O</td>
+        </tr>
+        <tr>
+            <td>63</td>
+            <td id="paikka63">O</td>
+        </tr>
+        <tr>
+            <td>64</td>
+            <td id="paikka64">O</td>
+        </tr>
+        <tr>
+            <td>65</td>
+            <td id="paikka65">O</td>
+        </tr>
+        <tr>
+            <td>66</td>
+            <td id="paikka66">O</td>
+        </tr>
+        <tr>
+            <td>67</td>
+            <td id="paikka67">O</td>
+        </tr>
+        <tr>
+            <td>68</td>
+            <td id="paikka68">O</td>
+        </tr>
+        <tr>
+            <td>69</td>
+            <td id="paikka69">O</td>
+        </tr>
+        <tr>
+            <td>70</td>
+            <td id="paikka70">O</td>
+        </tr>
+        <tr>
+            <td>71</td>
+            <td id="paikka71">O</td>
+        </tr>
+        <tr>
+            <td>72</td>
+            <td id="paikka72">O</td>
+        </tr>
+        <tr>
+            <td>73</td>
+            <td id="paikka73">O</td>
+        </tr>
+        <tr>
+            <td>74</td>
+            <td id="paikka74">O</td>
+        </tr>
+        <tr>
+            <td>75</td>
+            <td id="paikka75">O</td>
+        </tr>
+        <tr>
+            <td>76</td>
+            <td id="paikka76">O</td>
+        </tr>
+        <tr>
+            <td>77</td>
+            <td id="paikka77">O</td>
+        </tr>
+        <tr>
+            <td>78</td>
+            <td id="paikka78">O</td>
+        </tr>
+        <tr>
+            <td>79</td>
+            <td id="paikka79">O</td>
+        </tr>
+        <tr>
+            <td>80</td>
+            <td id="paikka80">O</td>
+        </tr>
+    </table>
+
+    <script>
+        //array ja muita yhteisiä muuttujia
+        var varausKalenteri= [];
+        var tulostus = "";
+        var lkm = 81; 
+
+        
+        
+        function varaa(){
+            let varaaja = document.getElementById("paikka").value;
+            let onkoVapaa = false;
+
+            if(varaaja > 0 && varaaja <= 80){
+                    //tarkistetaan löytyykö arraystä
+                for(let i = 1; i < lkm;i++){ // ilmoitetaan for-loopilla toistojen määrä (80)
+                    if(varaaja == varausKalenteri[i]){
+                        onkoVapaa = true; //jos löytyy niin on varattu
+                    }
+                }
+
+                if(onkoVapaa){ // booleanin avulla kerrotaan, että paikka on varattuna ja löytyy jo taulukosta 
+                tulostus = "Paikka on jo varattu! Valitse toinen!"
+                }
+
+                else { //jos ei löydy vielä arraystä lisätään ja muutetaan varatuksi
+                varausKalenteri.push(varaaja);
+                tulostus = "Paikka on nyt sinulle varattu. Kiitos varauksesta!"; 
+                }
+                // Muutetaan vapaat varatuiksi
+                if (varaaja === 1){
+                    document.getElementById("paikka1").innerHTML = "X"; 
+                }
+
+                else if(varaaja === 2){
+                    document.getElementById("paikka2").innerHTML = "X"; 
+                }
+
+                else if(varaaja === 3){
+                    document.getElementById("paikka3").innerHTML = "X"; 
+                }
+
+                else if(varaaja === 4){
+                    document.getElementById("paikka4").innerHTML = "X";  
+                }
+
+                else if(varaaja === 5){
+                    document.getElementById("paikka5").innerHTML = "X";  
+                }
+
+                else if(varaaja === 6){
+                    document.getElementById("paikka6").innerHTML = "X"; 
+                }
+
+                else if(varaaja === 7){
+                    document.getElementById("paikka7").innerHTML = "X";   
+                }
+
+                else if(varaaja === 8){
+                    document.getElementById("paikka8").innerHTML = "X";  
+                }
+
+                else if(varaaja === 9){
+                    document.getElementById("paikka9").innerHTML = "X";   
+                }
+                
+                else if(varaaja === 10){
+                    document.getElementById("paikka10").innerHTML = "X"; 
+                }
+
+                else if(varaaja === 11){
+                    document.getElementById("paikka11").innerHTML = "X"; 
+                }
+                else if(varaaja === 12){
+                    document.getElementById("paikka12").innerHTML = "X";
+                }
+                else if(varaaja === 13){
+                    document.getElementById("paikka13").innerHTML = "X";
+                }
+                else if(varaaja === 14){
+                    document.getElementById("paikka14").innerHTML = "X";
+                }
+                else if(varaaja === 15){
+                    document.getElementById("paikka15").innerHTML = "X";
+                }
+                else if(varaaja === 16){
+                    document.getElementById("paikka16").innerHTML = "X";
+                }
+                else if(varaaja === 17){
+                    document.getElementById("paikka17").innerHTML = "X";
+                }
+                else if(varaaja === 18){
+                    document.getElementById("paikka18").innerHTML = "X";
+                }
+                else if(varaaja === 19){
+                    document.getElementById("paikka19").innerHTML = "X";
+                }
+                else if(varaaja === 20){
+                    document.getElementById("paikka20").innerHTML = "X";
+                }
+                else if(varaaja === 21){
+                    document.getElementById("paikka21").innerHTML = "X";
+                }
+                else if(varaaja === 22){
+                    document.getElementById("paikka22").innerHTML = "X";
+                }
+                else if(varaaja === 23){
+                    document.getElementById("paikka23").innerHTML = "X";
+                }
+                else if(varaaja === 24){
+                    document.getElementById("paikka24").innerHTML = "X";
+                }
+                else if(varaaja === 25){
+                    document.getElementById("paikka25").innerHTML = "X";
+                }
+                else if(varaaja === 26){
+                    document.getElementById("paikka26").innerHTML = "X";
+                }
+                else if(varaaja === 27){
+                    document.getElementById("paikka27").innerHTML = "X"; 
+                }
+                else if(varaaja === 28){
+                    document.getElementById("paikka28").innerHTML = "X";
+                }
+                else if(varaaja === 29){
+                    document.getElementById("paikka29").innerHTML = "X";  
+                }
+                else if(varaaja === 30){
+                    document.getElementById("paikka30").innerHTML = "X";
+                }
+                else if(varaaja === 31){
+                    document.getElementById("paikka31").innerHTML = "X"; 
+                }
+                else if(varaaja === 32){
+                    document.getElementById("paikka32").innerHTML = "X";
+                }
+                else if(varaaja === 33){
+                    document.getElementById("paikka33").innerHTML = "X";
+                }
+                else if(varaaja === 34){
+                    document.getElementById("paikka34").innerHTML = "X";
+                }
+                else if(varaaja === 35){
+                    document.getElementById("paikka35").innerHTML = "X";
+                }
+                else if(varaaja === 36){
+                    document.getElementById("paikka36").innerHTML = "X";
+                }
+                else if(varaaja === 37){
+                    document.getElementById("paikka37").innerHTML = "X";
+                }
+                else if(varaaja === 38){
+                    document.getElementById("paikka38").innerHTML = "X";
+                }
+                else if(varaaja === 39){
+                    document.getElementById("paikka39").innerHTML = "X";   
+                }
+                else if(varaaja === 40){
+                    document.getElementById("paikka40").innerHTML = "X";
+                }
+                else if(varaaja === 41){
+                    document.getElementById("paikka41").innerHTML = "X";
+                }
+                else if(varaaja === 42){
+                    document.getElementById("paikka42").innerHTML = "X";
+                }
+                else if(varaaja === 43){
+                    document.getElementById("paikka43").innerHTML = "X";
+                }
+                else if(varaaja === 44){
+                    document.getElementById("paikka44").innerHTML = "X";
+                }
+                else if(varaaja === 45){
+                    document.getElementById("paikka45").innerHTML = "X";
+                }
+                else if(varaaja === 46){
+                    document.getElementById("paikka46").innerHTML = "X";
+                }
+                else if(varaaja === 47){
+                    document.getElementById("paikka47").innerHTML = "X";
+                }
+                else if(varaaja === 48){
+                    document.getElementById("paikka48").innerHTML = "X";
+                }
+                else if(varaaja === 49){
+                    document.getElementById("paikka49").innerHTML = "X";
+                }
+                else if(varaaja === 50){
+                    document.getElementById("paikka50").innerHTML = "X";
+                }
+                else if(varaaja === 51){
+                    document.getElementById("paikka51").innerHTML = "X";
+                }
+                else if(varaaja === 52){
+                    document.getElementById("paikka52").innerHTML = "X";
+                }
+                else if(varaaja === 53){
+                    document.getElementById("paikka53").innerHTML = "X";
+                }
+                else if(varaaja === 54){
+                    document.getElementById("paikka54").innerHTML = "X";
+                }
+                else if(varaaja === 55){
+                    document.getElementById("paikka55").innerHTML = "X"; 
+                }
+                else if(varaaja === 56){
+                    document.getElementById("paikka56").innerHTML = "X"; 
+                }
+                else if(varaaja === 57){
+                    document.getElementById("paikka57").innerHTML = "X";
+                }
+                else if(varaaja === 58){
+                    document.getElementById("paikka58").innerHTML = "X";    
+                }
+                else if(varaaja === 59){
+                    document.getElementById("paikka59").innerHTML = "X";
+                }
+                else if(varaaja === 60){
+                    document.getElementById("paikka60").innerHTML = "X";    
+                }
+                else if(varaaja === 61){
+                    document.getElementById("paikka61").innerHTML = "X";    
+                }
+                else if(varaaja === 62){
+                    document.getElementById("paikka62").innerHTML = "X";    
+                }
+                else if(varaaja === 63){
+                    document.getElementById("paikka63").innerHTML = "X";    
+                }
+                else if(varaaja === 64){
+                    document.getElementById("paikka64").innerHTML = "X";    
+                }
+                else if(varaaja === 65){
+                    document.getElementById("paikka65").innerHTML = "X";    
+                }
+                else if(varaaja === 66){
+                    document.getElementById("paikka66").innerHTML = "X";    
+                }
+                else if(varaaja === 67){
+                    document.getElementById("paikka67").innerHTML = "X";    
+                }
+                else if(varaaja === 68){
+                    document.getElementById("paikka68").innerHTML = "X";    
+                }
+                else if(varaaja === 69){
+                    document.getElementById("paikka69").innerHTML = "X";    
+                }
+                else if(varaaja === 70){
+                    document.getElementById("paikka70").innerHTML = "X";    
+                }
+                else if(varaaja === 71){
+                    document.getElementById("paikka71").innerHTML = "X";    
+                }
+                else if(varaaja === 72){
+                    document.getElementById("paikka72").innerHTML = "X";    
+                }
+                else if(varaaja === 73){
+                    document.getElementById("paikka73").innerHTML = "X";    
+                }
+                else if(varaaja === 74){
+                    document.getElementById("paikka74").innerHTML = "X";    
+                }
+                else if(varaaja === 75){
+                    document.getElementById("paikka75").innerHTML = "X";    
+                }
+                else if(varaaja === 76){
+                    document.getElementById("paikka76").innerHTML = "X";    
+                }
+                else if(varaaja === 77){
+                    document.getElementById("paikka77").innerHTML = "X";    
+                }
+                else if(varaaja === 78){
+                    document.getElementById("paikka78").innerHTML = "X";    
+                }
+                else if(varaaja === 79){
+                    document.getElementById("paikka79").innerHTML = "X";    
+                }
+                else if(varaaja === 80){
+                    document.getElementById("paikka80").innerHTML = "X";    
+                }
+            }
+
+            else { //jos numero ei sisälly paikkakarttaan
+          tulostus = "Valitse paikka 1 ja 80 väliltä!";
+        }
+                
+            //Tulostus
+        document.getElementById("tulostusAlue").innerHTML = tulostus;
+        }
+        
+    </script>
+</body>
+</html>
