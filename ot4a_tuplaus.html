@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Tuplaus</title>
+    <script src="ot4.js"></script><!-- Kerrotaan, että scriptit on toisessa tiedostossa ja kaikki tässä tiedostossa olevat ovat nyt käytössä-->
+</head>
+<body>
+    Syötä kokonaisluku: <input id="luku"/>
+    <br/>
+    <button onclick="laske();">Tuplaa</button>
+    <br/>
+    <div id="tulostusAlue"></div>
+
+    <script>
+
+        function laske(){
+            let tuplattava = document.getElementById("luku").value;
+        
+            let summa = tuplaa(tuplattava); //kutsutaan functiota tuplaa ja käytetään tuplattava:ssa olevaa arvoa
+            console.log(summa); //seurataan consolista mitä tapahtuu
+
+            if (Number.isInteger(summa)){ //jos vastaus on kokonaisluku annetaan vastaus, jos ei niin kehotetaan antamaan kokonaisluku
+            document.getElementById("tulostusAlue").innerHTML = summa;
+            }
+            else {
+            document.getElementById("tulostusAlue").innerHTML = "Anna kokonaisluku!";
+            }
+        }
+    
+    </script>
+    
+</body>
+</html>
