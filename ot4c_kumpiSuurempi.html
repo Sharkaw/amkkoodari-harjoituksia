@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Kumpi on suurempi?</title>
+    <script src="ot4.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Syötä ensimmäinen numero:</th>
+            <th>Syötä toinen numero:</th>
+        </tr>
+        <tr>
+            <td><input id= "ekaLuku"/></td>
+            <td><input id= "tokaLuku"/></td>
+        </tr>      
+    </table>
+    <br/>
+    <button onclick="vertaa();">Vertaa</button>
+    <br/>
+    <br/>
+    <div id= "tulostusAlue"></div>
+
+    <script>
+            
+        function vertaa(){ 
+            let tulostus = "";   
+            var ekaLuku = document.getElementById("ekaLuku").value;
+            var tokaLuku = document.getElementById("tokaLuku").value;
+            
+            //tutkitaan onko annetut arvot ei-numeroita
+            if (isNaN(ekaLuku) || isNaN(tokaLuku)){
+                tulostus= "Syötä numerot!"
+                console.log(tulostus);
+            }
+            //jos ovat numeroita niin suoritetaan funktio
+            else {
+                let kumpi = suuruusTarkastus(ekaLuku,tokaLuku); //funktion kutsu tiedostoon
+                console.log(kumpi);
+                tulostus = kumpi;
+            }
+
+        document.getElementById("tulostusAlue").innerHTML = tulostus;
+        }
+
+    </script>
+</body>
+</html>
