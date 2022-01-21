@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palkkalaskenta</title>
+</head>
+<body>
+    <h1>Palkkalaskenta</h1>
+    Tuntipalkka: <input id="tPalkka">
+    <br/>
+    Tehdyt tunnit: <input id="tehdytTunnit">
+    <br/>
+    <button type="button" onclick="laske();">Laske</button>
+    <br/>
+    <div id="tulostusAlue"></div>
+
+    <script>
+        function laske(){
+        
+            //olio palkka ja tunti ominaisuuksilla, otetaan käyttäjän syöttämät tiedot
+            let palkka = {
+            tunnit: document.getElementById("tehdytTunnit").value,
+            tuntiPalkka: document.getElementById("tPalkka").value,
+            
+            laskePalkka: function(){ //kerrotaan ne ja palautetaan arvo
+                return this.tunnit * this.tuntiPalkka;
+            }
+        }
+            //tulostus
+            document.getElementById("tulostusAlue").innerHTML = palkka.laskePalkka() + " €";
+        }
+
+    </script>
+    
+</body>
+</html>
