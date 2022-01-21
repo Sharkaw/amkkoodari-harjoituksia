@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Leffakirjasto</title>
+</head>
+<body>
+    Lisää elokuva: <input id="elokuva"/>
+    <button onclick="lisaa();">Lisää</button>
+    <button onclick="tulostaKaikki();">Tulosta kaikki</button>
+    <br/>
+    <div id="tulostusAlue"></div>
+
+    <script>
+    //globaalimuuttuja array
+        let elokuvat = [];
+
+        //lisäys
+        function lisaa(){
+            let elokuva = document.getElementById("elokuva").value;
+            elokuvat.push(elokuva); //lisätään arrayhin
+            
+            document.getElementById("elokuva").value = ""; //tyhjennetään kenttä joka lisäyksen jälkeen
+        }
+
+        //tulostus, arrayn läpi käynti
+        function tulostaKaikki(){
+            let tulostus = "";
+            elokuvat.sort(); //järjestetään aakkosittain sort-metodilla
+            // for käy arrayn läpi, toistaa niin kauan kuin halutaan.
+            // i alkaa ensimmäisestä solusta ja jatkaa niin kauan kuin soluja on vähemmän kuin arrayn pituus.
+            for(let i=0;i < elokuvat.length;i++){ //i=kierroslaskuri, arvo kasvaa joka kierros
+                tulostus += "<br/>" + elokuvat [i];
+            }
+           
+            document.getElementById("tulostusAlue").innerHTML = tulostus;
+        }
+
+        
+    </script>
+</body>
+</html>
