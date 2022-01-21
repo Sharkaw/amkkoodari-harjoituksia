@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Valuuttamuunnin</title>
+    </head>
+
+    <body>
+       <h1>Muunna valuuttaa</h1> <br/>
+         <input id="valuutta"/> <br/>
+         <button type="button" onclick="muutaEuro();">USD --> EUR</button> 
+         <button type="button" onclick="muutaDollari();">EUR --> USD</button> 
+        <br/>
+         <div id="tulostusAlue">
+         </div>
+
+         <script> // kun nappia painetaan kerrotaan syötetty numero määritellyllä kurssilla
+            function muutaEuro(){
+                let Euro = Number(document.getElementById("valuutta").value);
+                let kurssiD = 1.08618; // Kurssi katsottu 8.4.20 Kauppalehden sivuilta
+
+                let summaE = Euro * kurssiD;
+
+                document.getElementById("tulostusAlue").innerHTML = summaE + " € ";
+             }
+
+            function muutaDollari(){
+                let Dollari = Number(document.getElementById("valuutta").value);
+                let kurssiE = 0.9204; // Kurssi katsottu 8.4.20 Kauppalehden sivuilta
+
+                let summaD = Dollari * kurssiE;
+
+                document.getElementById("tulostusAlue").innerHTML = summaD + " $ ";
+             }
+         </script>
+    </body>
+</html>
