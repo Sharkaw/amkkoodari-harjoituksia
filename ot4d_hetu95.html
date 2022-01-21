@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henkilötunnuksen tarkastus</title>
+    <script src=ot4.js></script>
+</head>
+<body>
+    <h1>Tarkista henkilötunnus</h1>
+    Syötä henkilötunnus:
+    <input id="hetu"/>
+    <br/>
+    <button onclick="tarkista();">Tarkista</button>
+    <br/>
+    <div id="tulostusAlue"></div>
+
+    <script>
+    
+
+    function tarkista(){
+        let henkiloTunnus = document.getElementById("hetu").value;
+        let tulostus ="";
+
+        let onko = tarkistaVuosi(henkiloTunnus); //lähetetään tiedot toiseen functioon
+        console.log(onko);
+        console.log(henkiloTunnus.slice(4,7)); //tarkistus mitä slice antaa
+        tulostus = onko;
+
+        document.getElementById("tulostusAlue").innerHTML = onko;
+    }
+
+
+    </script>
+</body>
+</html>
