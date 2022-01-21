@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Lippuautomaatti</title>
+    </head>
+
+    <body>
+        <h1>Lippuautomaatti</h1>
+        1. luokka
+        <input type="radio" name= "luokka" id="ensiLuokka">
+        <br/>
+        2. luokka
+        <input type="radio" name= "luokka" id="toinenLuokka">
+        <br/><br/>
+        Meno
+        <input type="radio" name= "kesto" id="meno">
+        <br/>
+        Meno-paluu
+        <input type="radio" name= "kesto" id="menoPaluu">
+        <br/><br/>
+        Alennus
+        <input type="checkbox" name="alennus" id="ale">
+        <br/><br/>
+        Lippuja (kpl)
+        <select id="maara">
+            <option value="1kpl">1</option>
+            <option value="2kpl">2</option>
+            <option value="3kpl">3</option>
+            <option value="4kpl">4</option>
+            <option value="5kpl">5</option>
+            <option value="6kpl">6</option>
+        </select>
+        <br/><br/>
+        <button onclick="osta()">Osta</button>
+        <br/><br/>
+        <div id="tulostusAlue"></div>
+
+        <script>
+  
+            function osta() {
+
+                let maara = document.getElementById("maara").value;
+           
+                    // luokka, tarkistetaan kumpi on valittuna ja annetaan lipulle hinta
+                if (document.getElementById("ensiLuokka").checked) {
+                    var luokka = 140.61;
+                }
+                if (document.getElementById("toinenLuokka").checked) {
+                    var luokka = 86.10;
+                }
+                    //menopaluu, tarkistetaan kumpi on valittuna ja annetaan menolle ja menopaluulle kerroin, jota myöhemmin käytetään
+                if (document.getElementById("meno").checked) {
+                    var meno = 1;
+                }
+                if (document.getElementById("menoPaluu").checked) {
+                    var meno = 2;
+                }
+                    //määrät, jokaisella oma hinta
+                if (maara === "1kpl") {
+                   var hinta = luokka;
+                }
+                else if (maara === "2kpl" ) {
+                    hinta = luokka * 2;
+                }
+                else if (maara === "3kpl") {
+                    hinta = luokka * 3;
+                }
+                else if (maara === "4kpl") {
+                    hinta = luokka * 4;
+                }
+                else if (maara === "5kpl") {
+                    hinta = luokka * 5;
+                }
+                else if (maara === "6kpl") {
+                    hinta = luokka * 6;
+                }
+                    //alennus annetaan jos "alennus" ja "toinenLuokka" ovat valittuina. Käytän "summaa" kokoajana.
+                if (document.getElementById("ale").checked && document.getElementById("toinenLuokka").checked) {
+                   var summa = (hinta * meno) / 2;
+                }
+                else {
+                    summa = hinta * meno;
+                }
+                    //pyöristys
+                let roundUp = summa.toFixed(2);
+                    //tulostus
+                document.getElementById("tulostusAlue").innerHTML = "Kokonaishinta: " + roundUp + " €";
+            }
+
+        </script>
+    </body>
+</html>
