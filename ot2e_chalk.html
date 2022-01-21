@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Toisto</title>
+
+    </head>
+
+    <body>
+<button type ="button" onclick="toista()">Aloita</button>
+<br/>
+<div id="tulostusAlue"></div>
+<script>
+    function toista(){ // käytetään for-looppia ja kerrotaan kuinka monta kertaa halutaan teksti tulostettavan
+        let lkm = 301;
+        let kokoTuloste = "";
+        let tulostettava = "I WILL NOT WASTE CHALK!"
+        for(let i = 1;i < lkm;i++){
+            kokoTuloste += i + ". " + tulostettava + "<br/>";
+        }
+        document.getElementById("tulostusAlue").innerHTML = kokoTuloste;
+    }
+</script>
+
+    </body>
+</html>
