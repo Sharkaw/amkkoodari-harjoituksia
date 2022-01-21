@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Hetu-tutkija</title>
+</head>
+<body>
+    Syötä henkilötunnus: <input id="hetu"/>
+    <br/>
+    <button onclick="tulosta();">Tutki vuosisata</button>
+    <br/>
+    <br/>
+    <div id="tulostusAlue"></div>
+
+    <script>
+        function tulosta(){
+            let henkiloTunnus = document.getElementById("hetu").value;
+
+            let tulostus = "";
+
+            /*tutkitaan sisältääkö käyttäjän syöttämä hetu include-metodilla minkä vuosisatatunnuksen se sisältää
+             ja tulostetaan sen mukaisesti*/
+                if(henkiloTunnus.includes("+")) {
+                    tulostus = "Olet syntynyt 1800-luvulla!";
+                }
+
+                 else if(henkiloTunnus.includes("-")) {
+                    tulostus = "Olet syntynyt 1900-luvulla!";
+                }
+
+                else if(henkiloTunnus.includes("A")) {
+                    tulostus = "Olet syntynyt 2000-luvulla!";
+                }
+        
+            document.getElementById("tulostusAlue").innerHTML = tulostus;
+        }
+    </script>
+</body>
+</html>
