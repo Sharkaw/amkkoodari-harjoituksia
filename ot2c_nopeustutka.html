@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Nopeustutka</title>
+    </head>
+
+    <body>
+        <h1>Nopeustutka</h1>
+        <br/>
+        Nopeusrajoitus:<br/>
+        <input id="nopeusRajoitus"/>
+        <br/>
+        Auton nopeus:<br/>
+        <input id= "autonNopeus"/>
+        <br/>
+        <button type="button" onclick="tutki();">Tutki</button>
+        <br/>
+        <div id="tulostusAlue"></div><br/>
+
+        <script> 
+
+            function tutki() {
+                let tulostus = "";
+                let auto = Number(document.getElementById("autonNopeus").value);
+                let rajoitus = Number(document.getElementById("nopeusRajoitus").value);
+                let sakko1 = rajoitus + 15;
+                let sakko2 = rajoitus + 20;
+               
+                if (auto <= rajoitus) { 
+                    tulostus = "Toivota hyvää matkaa!";   
+                }
+                else if (rajoitus <=60 && auto <= sakko1) { 
+                    tulostus = "Määrää rikesakkoa 170 €!";
+                }
+                else if (rajoitus > 60 && auto <= sakko1) { 
+                    tulostus = "Määrää rikesakkoa 140 €!";
+                }
+                else if (auto > sakko1 && auto <= sakko2){
+                    tulostus = "Määrää rikesakkoa 200 €";
+                }
+                else {
+                    tulostus = "Kysy tulot ja laske päiväsakko!";
+                }
+
+                document.getElementById("tulostusAlue").innerHTML = tulostus;  
+            }
+
+
+        </script>
+
+    </body>
+</html>
