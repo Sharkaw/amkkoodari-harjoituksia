@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id= "tulostusAlue" class="div1">
+        <button type="button" onclick="laske();">Selvitä pinta-alani</button>
+    </div>
+    
+    <style> /*määritetään css:llä suorakulmio näkyväksi */
+        .div1 {
+        width: 400px;
+        height: 200px;
+        border: 1px solid blue;
+        text-align: center;
+        padding: 50px;
+        box-sizing: border-box;
+      }
+    </style>
+
+    <script>
+        //luodaan olio ja ominaisuudet, palautetaan kertolaskun summa, kun käyttäjä klikkaa nappia
+        let suorakulmio={
+            korkeus: 200,
+            leveys: 400,
+            pintaAla: function(){
+                return "Se on " + this.korkeus * this.leveys + " neliöpikseliä!";
+            }   
+        }
+
+        function laske(){
+            document.getElementById("tulostusAlue").innerHTML = suorakulmio.pintaAla();
+        }
+
+    </script>
+    
+</body>
+</html>
