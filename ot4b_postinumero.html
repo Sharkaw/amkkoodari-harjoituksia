@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Postinumeron Tarkistus</title>
+    <script src="ot4.js"></script> 
+</head>
+<body>
+    Syötä postinumero: <input id="numero"/>
+    <br/>
+    <button onclick="tarkista();">Tarkista</button>
+    <br/>
+    <div id="tulostusAlue"></div>
+
+    <script>
+        function tarkista(){ //functio napin painamiselle
+
+            let tulostus = "";
+            let postiNumero = document.getElementById("numero").value; 
+            let onkoNumero = tarkistaPostiNumero(postiNumero); //kutsutaan functiota
+
+            if (onkoNumero){ //tarkistetaan onko true vai false ja toimitaan sen mukaan
+                tulostus = "Tämä on postinumero."
+                console.log(tulostus); //tulostus konsoliin, en ole varma ymmärsinkö oikein mitä haettiin
+            }
+            else {
+                tulostus = "Tämä ei ole postinumero."
+                console.log(tulostus);
+            }
+            document.getElementById("tulostusAlue").innerHTML = tulostus;
+        }
+
+    </script>
+</body>
+</html>
