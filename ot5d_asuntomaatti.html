@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Asuntomaatti</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"><h1>Asuntomaatti</h1>
+            <h2 class="text-muted">Syötä asunnon tiedot</h2>
+        </div>
+        <div class="col-md-4"></div>
+    
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"><form>
+            Kohdenumero: <input id ="kohdeNumero"/>
+            <br/>
+            Osoite: <input id="osoite"/>
+            <br/>
+            Hinta: <input id="hinta"/>
+            <br/>
+            Pinta-ala: <input id="pintaAla"/>
+            </form><br/><br/>
+            <button type="button" class="btn btn-info" onclick="lisaa();">Lisää</button>
+            <button type="button" class="btn btn-info" onclick="etsi();">Etsi</button>
+            <button type="button" class="btn btn-info" onclick="laskeNelioHinta();">Laske neliöhinta</button></div>
+        <div class="col-md-4">
+            <div id="tulostusAlue"></div>
+        </div>
+    </div>             
+</div>  
+       <script>
+           //luodaan array ja konstruktori asunnoille
+           var asunnot = [];
+
+           function Asunto(kohdeNumero,osoite,hinta,pintaAla) {
+               this.kohdeNumero = kohdeNumero;
+               this.osoite = osoite;
+               this.hinta = hinta;
+               this.pintaAla = pintaAla;
+           }
+
+           //Lisätään arrayhin nappia painamalla lomakkeen tiedot 
+
+           function lisaa(){
+                var kohdeNumero = document.getElementById("kohdeNumero").value;
+                var osoite = document.getElementById("osoite").value;
+                var hinta = document.getElementById("hinta").value;
+                var pintaAla = document.getElementById("pintaAla").value;
+                var nelioHinta = hinta / pintaAla;
+
+               //konstruktorin avulla luodaan tietojen pohjalta uusi olio, joka lisätään arrayhin
+               let asuntoOlio;
+               asuntoOlio = new Asunto(kohdeNumero,osoite,hinta,pintaAla);
+                
+               asunnot.push(asuntoOlio);
+               console.log("Lisätty");
+               
+           }
+            
+           function etsi(){
+            let tulostus = "";
+            let kohde = document.getElementById("kohdeNumero").value;
+            let onkoKohde = false;
+
+                for(let i=0;i < asunnot.length;i++){
+                    if(kohde  === asunnot[i].kohdeNumero){ //tutkitaan array
+                        onkoKohde = true;
+
+                        if(onkoKohde){ //jos löytyy niin tulostetaan asunnon tiedot lisäksi lasketaan arrayssa olevalle asunnolle neliöhinta
+                        var laskeNelioHinta = asunnot[i].hinta / asunnot[i].pintaAla;
+                        var nelioHinta = laskeNelioHinta.toFixed(2) + " €";
+                        tulostus = asunnot[i].kohdeNumero + "<br/>" + asunnot[i].osoite + "<br/>" + asunnot[i].hinta + "<br/>" + asunnot[i].pintaAla + "<br/>" + "Neliöhinta: " + nelioHinta;
+                        }
+                        else {
+                    tulostus = "Ei löydy. Tarkista kohdenumero.";
+                        }
+                    }      
+            }
+                console.log(tulostus);
+                document.getElementById("tulostusAlue").innerHTML = tulostus;
+           }
+
+           function laskeNelioHinta(){ //lasketaan neliöhinta lomakkeella olevista tiedoista
+                var hinta = document.getElementById("hinta").value;
+                var pintaAla = document.getElementById("pintaAla").value;
+                var laskettuNelioHinta = hinta / pintaAla;
+                tulostus = laskettuNelioHinta.toFixed(2) + " €";
+
+                document.getElementById("tulostusAlue").innerHTML = "Neliöhinta on " + tulostus;
+           }
+       </script>
+</body>
+</html>
